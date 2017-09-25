@@ -8,7 +8,7 @@ import {
 class About extends Component {
   render() {
     return (
-      <div id="about">
+      <div id="about" className="page">
         About page
       </div>
     );

@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   text-align: center;
   font-family: $font-secondary;
@@ -109,4 +114,10 @@ a {
       transform: translate(-8px, -8px);
     }
   }
+}
+
+.page {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
 }

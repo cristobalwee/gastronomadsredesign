@@ -8,7 +8,7 @@ import {
 class Landing extends Component {
   render() {
     return (
-      <div id="landing">
+      <div id="landing" className="page">
         <Link to="/about">about</Link>
       </div>
     );
