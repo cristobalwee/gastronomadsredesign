@@ -1,5 +1,82 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display");
 body {
   text-align: center;
-  font-family: "Playfair Display", serif;
-  font-weight: 700; }
+  font-family: "Avenir", sans-serif; }
+
+.center {
+  text-align: center; }
+
+.right {
+  float: right; }
+
+.left {
+  float: left; }
+
+.clearfix {
+  clear: both; }
+
+.inline {
+  display: inline !important; }
+
+.fixed {
+  position: fixed; }
+
+.content {
+  position: relative;
+  top: 50vh;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.responsive {
+  display: none; }
+
+a {
+  text-decoration: none !important; }
+  a:hover {
+    text-decoration: none !important; }
+
+.button {
+  width: 9rem;
+  height: 3rem;
+  position: relative; }
+  .button .button-front {
+    background-color: 0, 0, 0, 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    transition: all 0.35s ease; }
+  .button .button-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    text-align: center; }
+    .button .button-back p {
+      color: black;
+      padding: 0;
+      font-family: "Avenir"; }
+  .button.light .button-front {
+    border: solid 3px white; }
+  .button.light .button-back {
+    background-color: white;
+    border: solid 3px white; }
+    .button.light .button-back p {
+      color: black; }
+  .button.dark .button-front {
+    border: solid 3px black; }
+  .button.dark .button-back {
+    background-color: black;
+    border: solid 3px black; }
+    .button.dark .button-back p {
+      color: white; }
+  .button:hover {
+    cursor: pointer; }
+    .button:hover .button-front {
+      transform: translate(-8px, -8px); }
