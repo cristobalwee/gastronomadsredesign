@@ -10,6 +10,8 @@ import Landing from './pages/landing.jsx';
 import About from './pages/about.jsx';
 import Navigation from './components/navigation.jsx';
 
+//https://www.fullstackreact.com/articles/deploying-a-react-app-to-s3/
+
 class App extends Component {
   render() {
     return (

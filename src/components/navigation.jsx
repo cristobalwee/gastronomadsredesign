@@ -18,10 +18,10 @@ class Navigation extends Component {
       <div className="nav-bar">
         <div>
           <img src={Menu} />
-          </div>
+        </div>
         <div className="center">
-          <img src={Logo} />
-          </div>
+          <Link to="/"><img src={Logo} /></Link>
+        </div>
         <div>
           <img onClick={forceFocus} src={Search} />
           <input id="search" type="text" placeholder="Search"></input>
