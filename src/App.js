@@ -8,12 +8,14 @@ import {
 
 import Landing from './pages/landing.jsx';
 import About from './pages/about.jsx';
+import Navigation from './components/navigation.jsx';
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div>
+          <Navigation />
           <Route exact path="/" component={ Landing }/>
           <Route path="/about" component={ About }/>
         </div>
