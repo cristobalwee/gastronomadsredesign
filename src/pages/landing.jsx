@@ -10,8 +10,11 @@ import ArticleCard from '../components/articlecard.jsx';
 
 class Landing extends Component {
   render() {
+    const rating = 5;
+
     return (
       <div id="landing" className="page">
+        <div className="overlay"></div>
         <div className="hero">
           <div className="title">
             <h1>Barra Lima</h1>
@@ -21,7 +24,6 @@ class Landing extends Component {
             <Link to="/about"><Button type="light" /></Link>
           </div>
         </div>
-        <ArticleCard />
       </div>
     );
   }

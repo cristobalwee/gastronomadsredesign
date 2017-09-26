@@ -42,6 +42,13 @@ body {
   display: none;
 }
 
+.location {
+  img {
+    height: 20px;
+    padding: 0 5px 3px 0;
+  }
+}
+
 a {
   text-decoration: none !important;
 
@@ -50,12 +57,21 @@ a {
   }
 }
 
+.overlay {
+  height: 85vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 3;
+  box-sizing: border-box;
+}
+
 .nav-bar {
   position: relative;
   top: 0;
   left: 0;
   z-index: 10;
-  padding: 1.5rem 2.5rem;
+  padding: 1.5rem 2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
@@ -285,15 +301,16 @@ a {
 
 .page {
   position: relative;
-  padding: 0 2.5rem;
+  padding: 0 2rem;
 }
 
 #landing {
   padding-bottom: 2rem;
+  position: relative;
 
   .hero {
-    height: 83vh;
-    background-image: url(./media/hero.png);
+    height: 85vh;
+    background-image: url(https://res.cloudinary.com/gastronomads/image/upload/v1495511473/Primos3_m2vpxt.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -308,6 +325,7 @@ a {
       padding: 2rem;
       grid-row: 7;
       padding-left: 4rem;
+      z-index: 3;
 
       h1 {
         font-family: $font-primary;

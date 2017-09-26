@@ -10,8 +10,8 @@ import StarEmpty from '../media/star_empty.svg';
 import StarHalf from '../media/star_half.svg';
 import StarFull from '../media/star_full.svg';
 
-function Rating({props}) {
-  const gastro_rating = props.rating;
+function Rating({rating}) {
+  const gastro_rating = rating;
   let imgArr = [];
 
   if (Number.isInteger(gastro_rating)) {
