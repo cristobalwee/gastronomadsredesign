@@ -121,11 +121,18 @@ a {
   position: fixed;
   top: 0;
   animation: fade-in 0.5s ease;
-  z-index: 999; }
+  z-index: 999;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
   .nav-overlay .close {
     position: absolute;
     top: 2rem;
     right: 2rem; }
+    .nav-overlay .close:hover {
+      cursor: pointer; }
   .nav-overlay > div {
     text-align: center; }
     .nav-overlay > div h1 {

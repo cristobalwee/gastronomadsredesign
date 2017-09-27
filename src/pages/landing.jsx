@@ -26,7 +26,7 @@ class Landing extends Component {
           </div>
         </div>
         <div className="article-list">
-          <ArticleCard
+          {/*<ArticleCard
             title="Barra Lima"
             description="Everything about this place was different and unexpected.
               The small space was well lit and greatly welcoming, a sense of familiarity
@@ -37,7 +37,7 @@ class Landing extends Component {
               the sea and the earth, a tantalizing yin-yang of flavors, colors, and aromas."
             img="https://res.cloudinary.com/gastronomads/image/upload/v1491486036/BarraLima2_xrdrkq.jpg"
             location="Lima, Peru"
-            rating={4} />
+            rating={4} />*/}
         </div>
       </div>
     );
