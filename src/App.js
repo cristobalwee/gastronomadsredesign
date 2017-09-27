@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './index.scss';
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
 
 import Landing from './pages/landing.jsx';

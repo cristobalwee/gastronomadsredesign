@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import Logo from '../media/logo.svg';
 import Menu from '../media/menu.svg';
@@ -50,27 +46,27 @@ class Navigation extends Component {
       <div>
         <div className="nav-bar">
           <div>
-            <img onClick={this.open.bind(this)} src={Menu} />
+            <img alt="menu" onClick={this.open.bind(this)} src={Menu} />
           </div>
           <div className="center">
-            <Link to="/"><img src={Logo} /></Link>
+            <Link to="/"><img alt="logo" src={Logo} /></Link>
           </div>
           <div>
-            <img onClick={this.forceFocus.bind(this)} src={Search} />
+            <img alt="search" onClick={this.forceFocus.bind(this)} src={Search} />
             <input id="search" type="text" placeholder="Search"></input>
           </div>
         </div>
         <div className="nav-overlay">
-          <img onClick={this.close.bind(this)} className="close" src={Close} />
+          <img alt="close" onClick={this.close.bind(this)} className="close" src={Close} />
           <div className="content">
-            <img className="icon" src={Icon} />
+            <img alt="icon" className="icon" src={Icon} />
             <Link onClick={this.close.bind(this)} to="/articles"><h1>Articles</h1></Link>
             <Link onClick={this.close.bind(this)} to="/about"><h1>About</h1></Link>
             <Link onClick={this.close.bind(this)} to="/criteria"><h1>Criteria</h1></Link>
             <a href="mailto:editorial@gastronomads.co"><h1>Contact</h1></a>
             <div className="social">
-              <img src={Fb} className="inline"></img>
-              <img src={Ig} className="inline"></img>
+              <img alt="facebook" src={Fb} className="inline"></img>
+              <img alt="instagram" src={Ig} className="inline"></img>
             </div>
           </div>
         </div>

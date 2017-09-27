@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import Button from '../components/button.jsx';
 import ArticleCard from '../components/articlecard.jsx';
-import Footer from '../components/footer.jsx';
 
 class Landing extends Component {
   render() {
