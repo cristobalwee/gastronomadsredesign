@@ -134,6 +134,108 @@ a {
   }
 }
 
+.nav-overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  opacity: 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  animation: fade-in 0.5s ease;
+  z-index: 999;
+
+  .close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  > div {
+    text-align: center;
+
+    h1 {
+      color: white;
+      font-family: $font-primary;
+      font-weight: 500;
+      margin: 2rem 0;
+      opacity: 0;
+      @include transform(translateY(-20px));
+      animation: fade-up 0.5s ease forwards;
+      animation-delay: 0.65s;
+    }
+
+    img {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+
+    .icon {
+      opacity: 0;
+      @include transform(translateY(-20px));
+      animation: fade-up 0.5s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    .social {
+      opacity: 0;
+      @include transform(translateY(-20px));
+      animation: fade-up 0.5s ease forwards;
+      animation-delay: 0.8s;
+    }
+  }
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  padding: 1.5rem 2rem;
+  background-color: $gray;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: white;
+
+  a {
+    color: white !important;
+  }
+
+  img:hover {
+    cursor: pointer;
+  }
+
+  div:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: left;
+
+    img {
+      height: 0.8rem;
+    }
+  }
+
+  div:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+
+    img {
+      height: 1rem;
+    }
+  }
+
+  div:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1;
+    text-align: right;
+
+    img {
+      height: 1.2rem;
+    }
+  }
+}
+
 .button {
   width: 9rem;
   height: 2rem;
@@ -231,7 +333,7 @@ a {
       height: 100%;
       opacity: 0;
       @include transition(all 0.2s ease-in-out);
-      padding-top: 7rem;
+      //padding-top: 7rem;
 
       #read-more {
         text-align: center;
@@ -241,7 +343,9 @@ a {
         width: 45%;
         margin: 0 auto;
         padding: 0.3rem 1rem;
-        @include border-radius(4px);
+        position: relative;
+        top: 50%;
+        @include transform(translateY(-50%));
         @include transition(all 0.2s ease-in-out);
 
         &:hover {
@@ -304,6 +408,12 @@ a {
   padding: 0 2rem;
 }
 
+.article-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1rem;
+}
+
 #landing {
   padding-bottom: 2rem;
   position: relative;
@@ -317,6 +427,12 @@ a {
     text-align: left;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    animation: hero-appear 0.5s ease;
+
+    .overlay-wrapper {
+      position: relative;
+      grid-column: 1 / 3;
+    }
 
     .title {
       color: white;
@@ -331,17 +447,54 @@ a {
         font-family: $font-primary;
         font-weight: 500;
         font-size: 3rem;
+        animation: fade-up 0.5s ease forwards;
+        animation-delay: 0.5s;
+        opacity: 0;
+        @include transform(translateY(20px));
       }
 
       p {
         text-align: justify;
         line-height: 180%;
+        animation: fade-up 0.5s ease forwards;
+        animation-delay: 0.65s;
+        opacity: 0;
+        @include transform(translateY(20px));
       }
 
       .button {
         margin-top: 20px;
         margin-left: 10px;
+        animation: fade-up 0.5s ease forwards;
+        animation-delay: 0.8s;
+        opacity: 0;
+        @include transform(translateY(20px));
       }
     }
+  }
+
+  .article-list {
+    position: relative;
+    top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@keyframes hero-appear {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-up {
+  to {
+    opacity: 1;
+    @include transform(translateY(0));
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
   }
 }

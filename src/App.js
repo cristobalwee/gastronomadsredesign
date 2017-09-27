@@ -9,6 +9,7 @@ import {
 import Landing from './pages/landing.jsx';
 import About from './pages/about.jsx';
 import Navigation from './components/navigation.jsx';
+import Footer from './components/footer.jsx';
 
 //https://www.fullstackreact.com/articles/deploying-a-react-app-to-s3/
 
@@ -20,6 +21,7 @@ class App extends Component {
           <Navigation />
           <Route exact path="/" component={ Landing }/>
           <Route path="/about" component={ About }/>
+          <Footer />
         </div>
       </Router>
     );
