@@ -15,19 +15,19 @@ function Rating({rating}) {
   let imgArr = [];
 
   if (Number.isInteger(gastro_rating)) {
-    for (var i = 0; i < gastro_rating; i++) {
+    for (let i = 0; i < gastro_rating; i++) {
       imgArr.push(1);
     }
-    for (var i = 0; i < 6 - gastro_rating; i++) {
+    for (let i = 0; i < 6 - gastro_rating; i++) {
       imgArr.push(0);
     }
   }
   else {
-    for (var i = 0; i < gastro_rating - 0.5; i++) {
+    for (let i = 0; i < gastro_rating - 0.5; i++) {
       imgArr.push(1);
     }
     imgArr.push(0.5);
-    for (var i = 0; i < 6 - (gastro_rating + 0.5); i++) {
+    for (let i = 0; i < 6 - (gastro_rating + 0.5); i++) {
       imgArr.push(0);
     }
   }
@@ -36,13 +36,13 @@ function Rating({rating}) {
       {imgArr.map((image, i) => {
         switch(image) {
           case 0:
-            return <img key={i} src={StarEmpty}></img>
+            return <img alt="star" key={i} src={StarEmpty}></img>
           case 0.5:
-            return <img key={i} src={StarHalf}></img>
+            return <img alt="star" key={i} src={StarHalf}></img>
           case 1:
-            return <img key={i} src={StarFull}></img>
+            return <img alt="star" key={i} src={StarFull}></img>
           default:
-            return <img key={i} src={StarEmpty}></img>
+            return <img alt="star" key={i} src={StarEmpty}></img>
         }
       })}
     </span>

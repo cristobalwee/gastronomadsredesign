@@ -42,9 +42,16 @@ body {
   padding: 0 5px 3px 0; }
 
 a {
-  text-decoration: none !important; }
+  text-decoration: none !important;
+  color: black !important; }
   a:hover {
-    text-decoration: none !important; }
+    text-decoration: none !important;
+    color: black !important; }
+
+.loader h1 {
+  font-family: "Playfair Display", serif;
+  color: black;
+  font-weight: 500; }
 
 .overlay {
   height: 85vh;

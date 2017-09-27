@@ -64,9 +64,9 @@ class Navigation extends Component {
           <img onClick={this.close.bind(this)} className="close" src={Close} />
           <div className="content">
             <img className="icon" src={Icon} />
-            <Link to="/articles"><h1>Articles</h1></Link>
-            <Link to="/about"><h1>About</h1></Link>
-            <Link to="/criteria"><h1>Criteria</h1></Link>
+            <Link onClick={this.close.bind(this)} to="/articles"><h1>Articles</h1></Link>
+            <Link onClick={this.close.bind(this)} to="/about"><h1>About</h1></Link>
+            <Link onClick={this.close.bind(this)} to="/criteria"><h1>Criteria</h1></Link>
             <a href="mailto:editorial@gastronomads.co"><h1>Contact</h1></a>
             <div className="social">
               <img src={Fb} className="inline"></img>
