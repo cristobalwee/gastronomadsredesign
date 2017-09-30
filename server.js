@@ -28,6 +28,16 @@ router.get("/", function(req, res) {
  res.json({ message: "API Initialized!"});
 });
 
+router.route("/articles")
+  .get(function(req, res) {
+    Article.find(function(err, articles) {
+      if (err) {
+        res.send(err);
+      }
+      res.json(articles)
+    });
+  })
+
 app.use("/api", router);
 app.listen(port, function() {
  console.log("api running on port " + port);

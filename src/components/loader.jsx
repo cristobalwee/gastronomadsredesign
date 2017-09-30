@@ -11,14 +11,13 @@ class Loader extends Component {
   }
 
   componentDidMount() {
-    // let loadInterval = setInterval(() => {
-    //   let temp = this.state.loaded;
-    //   this.setState({loaded: ++temp});
-    // }, 50);
-    //
-    // if (this.state.loaded >= 100) {
-    //   clearInterval(loadInterval);
-    // }
+    let loadInterval = setInterval(() => {
+      let temp = this.state.loaded;
+      this.setState({loaded: ++temp});
+      if (this.state.loaded >= 100) {
+        clearInterval(loadInterval);
+      }
+    }, Math.floor(Math.random() * 150));
   }
 
   render() {
