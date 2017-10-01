@@ -8,7 +8,7 @@ import Pin from '../media/icon_pin.svg';
 function ArticleCard(props) {
   return (
     <Link to={"/articles/" + props.url}>
-      <div className="article">
+      <div className="article-card">
         <div className="img" style={{backgroundImage: "url(" + props.img + ")"}}>
           <div className="article-overlay">
             <div id="read-more">Read More</div>

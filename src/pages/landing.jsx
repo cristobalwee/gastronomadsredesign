@@ -70,6 +70,22 @@ class Landing extends Component {
         </div>
         <div className="article-list">
           {List}
+          {/*<ArticleCard
+            date="May 2, 2017"
+            description="There’s a reason why it works; why Nikkei cuisine has established itself with such prominence in the country and why, time and time again, we’re able to find places like Tzuru just blocks away from ou…"
+            img="https://res.cloudinary.com/gastronomads/image/upload/v1493700828/TzuruFEATURED_jmu3lv.jpg"
+            location="Lima, Peru"
+            rating={4}
+            title="Tzuru"
+            url="tzuru" />
+          <ArticleCard
+            date="May 2, 2017"
+            description="There’s a reason why it works; why Nikkei cuisine has established itself with such prominence in the country and why, time and time again, we’re able to find places like Tzuru just blocks away from ou…"
+            img="https://res.cloudinary.com/gastronomads/image/upload/v1493700828/TzuruFEATURED_jmu3lv.jpg"
+            location="Lima, Peru"
+            rating={4}
+            title="Tzuru"
+            url="tzuru" />*/}
         </div>
       </div>
     );

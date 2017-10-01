@@ -319,29 +319,22 @@ a {
   }
 }
 
-.article {
+.article-card {
   text-align: center;
   background-color: white;
-  border: solid 1px $border;
-  @include border-radius(4px);
+  border: solid 2px $border;
   margin-bottom: 10px;
   max-height: 600px;
   text-overflow: ellipsis;
   @include transition(all 0.2s ease-in-out);
 
   &:hover {
-    box-shadow: 0 3px 9px rgba(0,0,0,0.3);
-    @include transform(translateY(-2px));
-
     .article-overlay {
       opacity: 1;
     }
   }
 
   > div {
-    @include border-top-left-radius(4px);
-    @include border-top-right-radius(4px);
-
     .article-overlay {
       background-color: rgba(0, 0, 0, 0.5);
       z-index: 10;
@@ -349,7 +342,6 @@ a {
       height: 100%;
       opacity: 0;
       @include transition(all 0.2s ease-in-out);
-      //padding-top: 7rem;
 
       #read-more {
         text-align: center;
@@ -395,7 +387,8 @@ a {
   }
 
   .article-info {
-    margin-top: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 25px;
     padding: 15px 15px;
     text-align: left;
 
@@ -405,6 +398,8 @@ a {
       margin-top: 0;
       font-size: 14px;
       color: black !important;
+      position: absolute;
+      margin-top: 1px;
 
       &:hover {
         color: black !important;
@@ -436,7 +431,7 @@ a {
 
   .hero {
     height: 85vh;
-    background-image: url(https://res.cloudinary.com/gastronomads/image/upload/v1495511473/Primos3_m2vpxt.jpg);
+    background-image: url("https://res.cloudinary.com/gastronomads/image/upload/c_scale,q_auto:eco,w_1440/v1495511473/Primos3_m2vpxt.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
