@@ -358,7 +358,7 @@ a {
   position: relative; }
   #landing .hero {
     height: 85vh;
-    background-image: url(https://res.cloudinary.com/gastronomads/image/upload/v1495511473/Primos3_m2vpxt.jpg);
+    background-image: url("https://res.cloudinary.com/gastronomads/image/upload/c_scale,q_auto:eco,w_1440/v1495511473/Primos3_m2vpxt.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

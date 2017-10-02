@@ -65,8 +65,12 @@ class Navigation extends Component {
             <Link onClick={this.close.bind(this)} to="/criteria"><h1>Criteria</h1></Link>
             <a href="mailto:editorial@gastronomads.co"><h1>Contact</h1></a>
             <div className="social">
-              <img alt="facebook" src={Fb} className="inline"></img>
-              <img alt="instagram" src={Ig} className="inline"></img>
+              <a href="https://www.facebook.com/gastronomadsofficial/" target="_blank">
+                <img alt="facebook" src={Fb} className="inline"></img>
+              </a>
+              <a href="https://www.instagram.com/gastronomadsofficial/" target="_blank">
+                <img alt="instagram" src={Ig} className="inline"></img>
+              </a>
             </div>
           </div>
         </div>
