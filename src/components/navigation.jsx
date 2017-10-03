@@ -41,6 +41,14 @@ class Navigation extends Component {
     }
   }
 
+  handleKeyPress(event) {
+    if(event.key === 'Enter') {
+      console.log("entered");
+      let searchText = document.getElementById("search").value;
+      window.location.assign('/articles?search=' + searchText);
+    }
+  }
+
   render() {
     return (
       <div>
@@ -53,7 +61,7 @@ class Navigation extends Component {
           </div>
           <div>
             <img alt="search" onClick={this.forceFocus.bind(this)} src={Search} />
-            <input id="search" type="text" placeholder="Search"></input>
+            <input id="search" type="text" onKeyPress={this.handleKeyPress} placeholder="Search"></input>
           </div>
         </div>
         <div className="nav-overlay">
