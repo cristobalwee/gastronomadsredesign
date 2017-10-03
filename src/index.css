@@ -353,6 +353,27 @@ a {
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 1rem; }
 
+.article {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1rem;
+  padding-bottom: 2rem; }
+  .article .article-content {
+    grid-column: 2;
+    animation: fade-in 0.5s ease; }
+    .article .article-content h1 {
+      font-family: "Playfair Display", serif;
+      text-align: left; }
+    .article .article-content h4 {
+      text-align: left;
+      font-weight: 100; }
+    .article .article-content p {
+      text-align: justify;
+      margin-bottom: 1rem;
+      line-height: 180%; }
+    .article .article-content img {
+      max-width: 500px; }
+
 #landing {
   padding-bottom: 2rem;
   position: relative; }
@@ -365,7 +386,7 @@ a {
     text-align: left;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    animation: hero-appear 0.5s ease; }
+    animation: fade-in 0.5s ease; }
     #landing .hero .overlay-wrapper {
       position: relative;
       grid-column: 1 / 3; }
@@ -416,7 +437,7 @@ a {
     top: 2rem;
     margin-bottom: 2rem; }
 
-@keyframes hero-appear {
+@keyframes fade-in {
   from {
     opacity: 0; } }
 

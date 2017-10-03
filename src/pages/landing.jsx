@@ -65,27 +65,11 @@ class Landing extends Component {
               day, almost the same: giant, fun, and unpretentious. Out of all
               the restaurants that have inhabited Lima’s magic corner, Primos
               has done it best by a wide margin.</p>
-            <Link to="/primos"><Button type="light" /></Link>
+            <Link to="/articles/primos"><Button type="light" /></Link>
           </div>
         </div>
         <div className="article-list">
-          {/*List*/}
-          <ArticleCard
-            date="May 2, 2017"
-            description="There’s a reason why it works; why Nikkei cuisine has established itself with such prominence in the country and why, time and time again, we’re able to find places like Tzuru just blocks away from ou…"
-            img="https://res.cloudinary.com/gastronomads/image/upload/v1493700828/TzuruFEATURED_jmu3lv.jpg"
-            location="Lima, Peru"
-            rating={4}
-            title="Tzuru"
-            url="tzuru" />
-          <ArticleCard
-            date="May 2, 2017"
-            description="There’s a reason why it works; why Nikkei cuisine has established itself with such prominence in the country and why, time and time again, we’re able to find places like Tzuru just blocks away from ou…"
-            img="https://res.cloudinary.com/gastronomads/image/upload/v1493700828/TzuruFEATURED_jmu3lv.jpg"
-            location="Lima, Peru"
-            rating={4}
-            title="Tzuru"
-            url="tzuru" />
+          {List}
         </div>
       </div>
     );

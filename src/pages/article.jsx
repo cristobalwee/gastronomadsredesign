@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 import Button from '../components/button.jsx';
 import ArticleCard from '../components/articlecard.jsx';
+import Pin from '../media/icon_pin.svg';
 
 class Article extends Component {
   constructor() {
     super();
     this.state = {
+      loading: true,
       articles: []
     }
   }
@@ -21,6 +22,7 @@ class Article extends Component {
     axios.get("http://localhost:3001/api/articles")
      .then(res => {
        this.setState({ articles: res.data });
+       this.setState({ loading: true });
     });
   }
 
@@ -39,20 +41,22 @@ class Article extends Component {
     if (!found) {
       return <h1>Something went wrong</h1>
     }
-    console.log(found);
 
     return (
-      <div>
-        <h4>{(found.restaurant[6]).date}&nbsp;&nbsp;&nbsp;
-          <span className="inline location"><img src="/media/icon_pin.svg"></img>
-          <h4 className="inline">{found.location}</h4></span>
-        </h4>
-        <h1>{found.title}</h1>
-        <img src={found.img}></img>
-        <p>{found.review[0].one}</p>
-        <p>{found.review[1].two}</p>
-        <p>{found.review[2].three}</p>
-        <p>{found.review[3].four}</p>
+      <div className="article page">
+        <div className="article-content">
+          <h4 className="inline">{(found.restaurant[6]).date}</h4>
+          <span className="inline location">
+            <img src={Pin}></img>
+            <h4 className="inline">{found.location}</h4>
+          </span>
+          <h1>{found.title}</h1>
+          <img alt={found.title} src={found.img}></img>
+          <p>{found.review[0].one}</p>
+          <p>{found.review[1].two}</p>
+          <p>{found.review[2].three}</p>
+          <p>{found.review[3].four}</p>
+        </div>
       </div>
     );
   }
