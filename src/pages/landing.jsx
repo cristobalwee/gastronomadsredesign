@@ -28,8 +28,8 @@ class Landing extends Component {
     let notFeatured = this.state.articles.reverse();
     if (notFeatured) {
       notFeatured.splice(1, 1);
-      if (notFeatured.length >= 8) {
-        notFeatured = notFeatured.slice(0, 8);
+      if (notFeatured.length >= 4) {
+        notFeatured = notFeatured.slice(0, 4);
       }
     }
 

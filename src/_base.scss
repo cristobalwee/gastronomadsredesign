@@ -60,10 +60,24 @@ a {
 }
 
 .loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: white;
+  text-align: center;
+  @include transition(0.5s all ease-in-out);
+
   h1 {
     font-family: $font-primary;
     color: black;
     font-weight: 500;
+  }
+
+  img {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -419,6 +433,27 @@ a {
   padding: 0 2rem;
 }
 
+.progress-bar {
+  position: relative;
+  width: 20rem;
+  height: 4px;
+  background-color: white;
+  overflow: hidden;
+  text-align: left;
+  @include border-radius(4px);
+  margin: 0 auto;
+
+  .progress-bar-inner {
+    height: 100%;
+    width: 20%;
+    position: relative;
+    left: 0;
+    @include transform(translateX(-100%));
+    background-color: black;
+    animation: progress 1.75s ease-in-out infinite both;
+  }
+}
+
 .article-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -533,5 +568,16 @@ a {
   to {
     opacity: 1;
     @include transform(translateY(0));
+  }
+}
+
+@keyframes progress {
+  50% {
+    left: 100%;
+    @include transform(translateX(0));
+  }
+
+  100% {
+    left: 0;
   }
 }

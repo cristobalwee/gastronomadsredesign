@@ -11,21 +11,29 @@ class Loader extends Component {
   }
 
   componentDidMount() {
-    let loadInterval = setInterval(() => {
-      let temp = this.state.loaded;
-      this.setState({loaded: ++temp});
-      if (this.state.loaded >= 100) {
-        clearInterval(loadInterval);
-      }
-    }, Math.floor(Math.random() * 150));
+    setTimeout(() => {
+      const loader = document.getElementsByClassName("loader")[0];
+      const progress = document.getElementsByClassName("progress-bar-inner")[0];
+      progress.style.animation = "none";
+      loader.style.left = "-100%";
+    }, 2000 + Math.random() * 500);
+    // let loadInterval = setInterval(() => {
+    //   let temp = this.state.loaded;
+    //   this.setState({loaded: ++temp});
+    //   if (this.state.loaded >= 100) {
+    //     clearInterval(loadInterval);
+    //   }
+    // }, Math.floor(Math.random() * 150));
   }
 
   render() {
     return (
-      <div className="loader page">
+      <div className="loader">
         <div className="content">
           <img alt="icon" src={Icon} />
-          <h1>{this.state.loaded}%</h1>
+          <div className="progress-bar">
+            <div className="progress-bar-inner"></div>
+          </div>
         </div>
       </div>
     );

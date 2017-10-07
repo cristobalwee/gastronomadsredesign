@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import Button from '../components/button.jsx';
-import ArticleCard from '../components/articlecard.jsx';
 import Pin from '../media/icon_pin.svg';
 
 class Article extends Component {

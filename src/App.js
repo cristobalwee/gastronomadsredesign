@@ -11,6 +11,7 @@ import Navigation from './components/navigation.jsx';
 import Footer from './components/footer.jsx';
 import Article from './pages/article.jsx';
 import ArticleList from './pages/articlelist.jsx';
+import Loader from './components/loader.jsx';
 
 //https://www.fullstackreact.com/articles/deploying-a-react-app-to-s3/
 
