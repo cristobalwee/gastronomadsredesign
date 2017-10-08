@@ -14,6 +14,8 @@ import ArticleList from './pages/articlelist.jsx';
 import Loader from './components/loader.jsx';
 
 //https://www.fullstackreact.com/articles/deploying-a-react-app-to-s3/
+//https://hackernoon.com/animated-page-transitions-with-react-router-4-reacttransitiongroup-and-animated-1ca17bd97a1a
+//https://github.com/ReactTraining/react-router/issues/4407
 
 class App extends Component {
   render() {
