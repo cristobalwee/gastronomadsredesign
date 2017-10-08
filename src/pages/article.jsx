@@ -50,7 +50,7 @@ class Article extends Component {
             <h4 className="inline">{found.location}</h4>
           </span>
           <h1>{found.title}</h1>
-          <img alt={found.title} src={found.img}></img>
+          <div className="image" style={{backgroundImage: "url(" + found.img + ")"}}></div>
           <p>{found.review[0].one}</p>
           <p>{found.review[1].two}</p>
           <p>{found.review[2].three}</p>
