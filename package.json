@@ -7,6 +7,7 @@
     "body-parser": "^1.18.2",
     "express": "^4.15.5",
     "foreman": "^2.0.0",
+    "gsap": "^1.20.3",
     "marked": "^0.3.6",
     "mongodb": "^2.2.31",
     "mongoose": "^4.11.13",
