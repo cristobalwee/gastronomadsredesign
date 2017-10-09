@@ -390,6 +390,19 @@ a {
     background-color: black;
     animation: progress 1.75s ease-in-out infinite both; }
 
+.error {
+  margin: 2rem;
+  padding: 8rem 0;
+  text-align: center; }
+  .error h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: 400; }
+  .error p {
+    text-align: justify;
+    line-height: 180%; }
+  .error .button {
+    margin: 2rem auto; }
+
 .article-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -477,6 +490,60 @@ a {
     position: relative;
     top: 2rem;
     margin-bottom: 2rem; }
+
+#about {
+  padding-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  animation: fade-in 0.5s ease; }
+  #about .content {
+    top: 50%; }
+  #about > div {
+    margin: 2rem 10rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 72vh;
+    color: white; }
+    #about > div h1 {
+      font-family: "Playfair Display", serif;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      animation: fade-up 0.5s ease forwards;
+      animation-delay: 0.5s;
+      opacity: 0;
+      -moz-transform: translateY(10px);
+      -o-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+      -webkit-transform: translateY(10px);
+      transform: translateY(10px); }
+    #about > div p {
+      font-family: "Avenir", sans-serif;
+      margin-bottom: 1rem;
+      animation: fade-up 0.3s ease forwards;
+      animation-delay: 0.65s;
+      opacity: 0;
+      -moz-transform: translateY(10px);
+      -o-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+      -webkit-transform: translateY(10px);
+      transform: translateY(10px); }
+    #about > div img {
+      margin: 0 0.5rem;
+      animation: fade-up 0.5s ease forwards;
+      animation-delay: 0.8s;
+      opacity: 0;
+      -moz-transform: translateY(10px);
+      -o-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+      -webkit-transform: translateY(10px);
+      transform: translateY(10px); }
+  #about #about-left {
+    background-image: url("./media/founder.png");
+    margin: 2rem 5rem 2rem 15rem; }
+  #about #about-right {
+    background-image: url("./media/developer.png");
+    margin: 2rem 15rem 2rem 5rem; }
 
 @keyframes fade-in {
   from {

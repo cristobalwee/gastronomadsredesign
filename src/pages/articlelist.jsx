@@ -12,11 +12,8 @@ class ArticleList extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.loadArticles();
-    const loader = document.getElementsByClassName("loader")[0];
-    const progress = document.getElementsByClassName("progress-bar-inner")[0];
-    progress.style.animation = "progress 1.75s ease-in-out infinite both";
-    loader.style.left = "0";
   }
 
   loadArticles() {

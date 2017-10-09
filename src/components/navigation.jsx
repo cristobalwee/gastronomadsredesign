@@ -36,7 +36,9 @@ class Navigation extends Component {
       //this.enableScroll();
       const overlay = document.getElementsByClassName("nav-overlay")[0];
       overlay.style.transform = "translateY(-100%)";
-      overlay.style.display = "none";
+      setTimeout(() => {
+        overlay.style.display = "none";
+      }, 500);
       this.setState({open: false});
     }
   }

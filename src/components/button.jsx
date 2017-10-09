@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Button({ type }) {
+function Button({ type, copy }) {
   return (
     <div className={"button " + type}>
       <div className="button-front"></div>
       <div className="button-back">
-        <p>Read more</p>
+        <p>{copy}</p>
       </div>
     </div>
   );

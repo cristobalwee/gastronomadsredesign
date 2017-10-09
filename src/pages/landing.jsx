@@ -14,6 +14,7 @@ class Landing extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.loadArticles();
   }
 
@@ -36,10 +37,13 @@ class Landing extends Component {
     let List;
     if (!notFeatured || !notFeatured.length) {
       List = (
-        <h1 className="error">Oh dear, it appears something's gone wrong. &#129300;</h1>
+        <div className="error">
+          <h1>Oh dear, it appears something's gone wrong. &#129300;</h1>
+          <Button type="dark" copy="Refresh page"/>
+        </div>
       );
     } else {
-      List = notFeatured.map((article, i) => (
+      List = <div className="article-list">{notFeatured.map((article, i) => (
         <ArticleCard
           key={i}
           url={article.url}
@@ -49,7 +53,7 @@ class Landing extends Component {
           location={article.location}
           rating={(article.restaurant[0]).gastro_rating}
           date={(article.restaurant[6]).date} />
-      ));
+      ))}</div>
     }
 
     return (
@@ -65,12 +69,10 @@ class Landing extends Component {
               day, almost the same: giant, fun, and unpretentious. Out of all
               the restaurants that have inhabited Lima’s magic corner, Primos
               has done it best by a wide margin.</p>
-            <Link to="/articles/primos"><Button type="light" /></Link>
+            <Link to="/articles/primos"><Button type="light" copy="Read more" /></Link>
           </div>
         </div>
-        <div className="article-list">
-          {List}
-        </div>
+        {List}
       </div>
     );
   }

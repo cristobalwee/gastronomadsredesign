@@ -454,6 +454,26 @@ a {
   }
 }
 
+.error {
+  margin: 2rem;
+  padding: 8rem 0;
+  text-align: center;
+
+  h1 {
+    font-family: $font-primary;
+    font-weight: 400;
+  }
+
+  p {
+    text-align: justify;
+    line-height: 180%;
+  }
+
+  .button {
+    margin: 2rem auto;
+  }
+}
+
 .article-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -554,6 +574,63 @@ a {
     position: relative;
     top: 2rem;
     margin-bottom: 2rem;
+  }
+}
+
+#about {
+  padding-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  animation: fade-in 0.5s ease;
+
+  .content {
+    top: 50%;
+  }
+
+  > div {
+    margin: 2rem 10rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 72vh;
+    color: white;
+
+    h1 {
+      font-family: $font-primary;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      animation: fade-up 0.5s ease forwards;
+      animation-delay: 0.5s;
+      opacity: 0;
+      @include transform(translateY(10px));
+    }
+
+    p {
+      font-family: $font-secondary;
+      margin-bottom: 1rem;
+      animation: fade-up 0.3s ease forwards;
+      animation-delay: 0.65s;
+      opacity: 0;
+      @include transform(translateY(10px));
+    }
+
+    img {
+      margin: 0 0.5rem;
+      animation: fade-up 0.5s ease forwards;
+      animation-delay: 0.8s;
+      opacity: 0;
+      @include transform(translateY(10px));
+    }
+  }
+
+  #about-left {
+    background-image: url("./media/founder.png");
+    margin: 2rem 5rem 2rem 15rem;
+  }
+
+  #about-right {
+    background-image: url("./media/developer.png");
+    margin: 2rem 15rem 2rem 5rem;
   }
 }
 
