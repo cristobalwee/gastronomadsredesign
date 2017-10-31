@@ -489,7 +489,8 @@ a {
   #landing .article-row {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 2rem 0; }
+    margin: 2rem 0;
+    height: 20rem; }
     #landing .article-row .img-col {
       background-image: url("https://res.cloudinary.com/gastronomads/image/upload/c_scale,q_auto:eco,w_600/v1493700828/TzuruFEATURED_jmu3lv.jpg");
       background-position: center;
