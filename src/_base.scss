@@ -582,6 +582,13 @@ a {
       background-repeat: no-repeat;
       background-size: cover;
     }
+
+    .info-col {
+      h1 {
+        font-family: $font-primary;
+        font-weight: 500;
+      }
+    }
   }
 
   .article-list {
