@@ -570,6 +570,19 @@ a {
     }
   }
 
+  .article-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2rem 0;
+
+    .img-col {
+      background-image: url("https://res.cloudinary.com/gastronomads/image/upload/c_scale,q_auto:eco,w_600/v1493700828/TzuruFEATURED_jmu3lv.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
   .article-list {
     position: relative;
     top: 2rem;

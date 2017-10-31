@@ -72,6 +72,20 @@ class Landing extends Component {
             <Link to="/articles/primos"><Button type="light" copy="Read more" /></Link>
           </div>
         </div>
+        <div className="article-row">
+          <div className="img-col"></div>
+          <div className="info-col">
+            <h1>Tzuru</h1>
+            <p>There's a reason why it works; why Nikkei cuisine has
+              established itself with such prominence in the country and why,
+              time and time again, we're able to find places like Tzuru
+              just blocks away from our homes. With its elegance and finesse,
+              its discipline and beauty, Japanese cuisine amalgamates perfectly,
+              in a harmonic dance of artistic execution, with Peruvian gastronomy;
+              bold, messy, spontaneous, and explosive.</p>
+            <Link to="/articles/tzuru"><Button type="dark" copy="Read more" /></Link>
+          </div>
+        </div>
         {List}
       </div>
     );
