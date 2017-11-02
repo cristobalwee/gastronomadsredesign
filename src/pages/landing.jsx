@@ -25,6 +25,10 @@ class Landing extends Component {
     });
   }
 
+  reload() {
+    window.location.reload();
+  }
+
   render() {
     let notFeatured = this.state.articles.reverse();
     if (notFeatured) {
@@ -39,7 +43,7 @@ class Landing extends Component {
       List = (
         <div className="error">
           <h1>Oh dear, it appears something's gone wrong. &#129300;</h1>
-          <Button type="dark" copy="Refresh page"/>
+          <Button onClick={this.reload.bind(this)} type="dark" copy="Refresh page"/>
         </div>
       );
     } else {
@@ -70,20 +74,6 @@ class Landing extends Component {
               the restaurants that have inhabited Lima’s magic corner, Primos
               has done it best by a wide margin.</p>
             <Link to="/articles/primos"><Button type="light" copy="Read more" /></Link>
-          </div>
-        </div>
-        <div className="article-row">
-          <div className="img-col"></div>
-          <div className="info-col">
-            <h1>Tzuru</h1>
-            <p>There's a reason why it works; why Nikkei cuisine has
-              established itself with such prominence in the country and why,
-              time and time again, we're able to find places like Tzuru
-              just blocks away from our homes. With its elegance and finesse,
-              its discipline and beauty, Japanese cuisine amalgamates perfectly,
-              in a harmonic dance of artistic execution, with Peruvian gastronomy;
-              bold, messy, spontaneous, and explosive.</p>
-            <Link to="/articles/tzuru"><Button type="dark" copy="Read more" /></Link>
           </div>
         </div>
         {List}

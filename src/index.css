@@ -277,7 +277,6 @@ a {
 .article-card {
   text-align: center;
   background-color: white;
-  border: solid 2px #e0e0e0;
   margin-bottom: 10px;
   max-height: 600px;
   text-overflow: ellipsis;
@@ -329,12 +328,12 @@ a {
     padding: 0 15px;
     margin-top: 10px;
     font-size: 24px;
-    text-align: left;
+    text-align: center;
     margin-bottom: 0; }
   .article-card p {
     color: #5a5a5a;
     font-family: "Avenir", sans-serif;
-    text-align: justify;
+    text-align: center;
     line-height: 140%;
     padding: 0 15px;
     font-size: 12px;
@@ -486,19 +485,6 @@ a {
         -ms-transform: translateY(20px);
         -webkit-transform: translateY(20px);
         transform: translateY(20px); }
-  #landing .article-row {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 2rem 0;
-    height: 20rem; }
-    #landing .article-row .img-col {
-      background-image: url("https://res.cloudinary.com/gastronomads/image/upload/c_scale,q_auto:eco,w_600/v1493700828/TzuruFEATURED_jmu3lv.jpg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover; }
-    #landing .article-row .info-col h1 {
-      font-family: "Playfair Display", serif;
-      font-weight: 500; }
   #landing .article-list {
     position: relative;
     top: 2rem;
