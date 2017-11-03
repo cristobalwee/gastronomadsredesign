@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import Button from '../components/button.jsx';
 import ArticleCard from '../components/articlecard.jsx';
+import Icon from '../media/icon_black.svg';
 
 class Landing extends Component {
   constructor() {
