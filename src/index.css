@@ -269,6 +269,25 @@ a {
     border: solid 3px black; }
     .button.dark .button-back p {
       color: white; }
+  .button.mix {
+    width: 6rem;
+    height: 1.5rem; }
+    .button.mix .button-front {
+      border: solid 1px black; }
+    .button.mix .button-back {
+      background-color: white;
+      border: solid 1px black;
+      top: -4px;
+      left: -4px; }
+      .button.mix .button-back p {
+        color: black;
+        -moz-transform: translateY(-40%);
+        -o-transform: translateY(-40%);
+        -ms-transform: translateY(-40%);
+        -webkit-transform: translateY(-40%);
+        transform: translateY(-40%); }
+    .button.mix:hover .button-front {
+      transform: translate(-4px, -4px); }
   .button:hover {
     cursor: pointer; }
     .button:hover .button-front {
@@ -277,6 +296,9 @@ a {
 .article-card {
   text-align: center;
   background-color: white;
+  -webkit-box-shadow: 0px 3px 12px 0px rgba(183, 180, 180, 0.5);
+  -moz-box-shadow: 0px 3px 12px 0px rgba(183, 180, 180, 0.5);
+  box-shadow: 0px 3px 12px 0px rgba(183, 180, 180, 0.5);
   margin-bottom: 10px;
   max-height: 600px;
   text-overflow: ellipsis;
@@ -285,8 +307,6 @@ a {
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
-  .article-card:hover .article-overlay {
-    opacity: 1; }
   .article-card > div .article-overlay {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 10;
@@ -335,7 +355,7 @@ a {
     font-family: "Avenir", sans-serif;
     text-align: center;
     line-height: 140%;
-    padding: 0 15px;
+    padding: 0 15px 50px 15px;
     font-size: 12px;
     margin-top: 10px;
     max-height: 150px; }
@@ -354,6 +374,13 @@ a {
       margin-top: 1px; }
       .article-card .article-info h4:hover {
         color: black !important; }
+  .article-card .button {
+    margin-left: 50%;
+    -moz-transform: translate(-50%, -25px);
+    -o-transform: translate(-50%, -25px);
+    -ms-transform: translate(-50%, -25px);
+    -webkit-transform: translate(-50%, -25px);
+    transform: translate(-50%, -25px); }
   .article-card .img {
     height: 200px;
     background-position: center;
@@ -405,7 +432,8 @@ a {
 .article-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 1rem; }
+  grid-column-gap: 1rem;
+  padding: 0 5rem; }
 
 .article {
   padding: 0 25vw 4rem 25vw; }

@@ -17,6 +17,7 @@ function ArticleCard(props) {
         </div>
         <h2>{props.title}</h2>
         <p>{props.description.length > 150 ? props.description.substr(0, 145) + "..." : props.description}</p>
+        <Button type="mix" copy="Read more" />
         {/*<div className="article-info clearfix">
           <span className="inline location left"><img alt="pin" src={Pin}></img><h4 className="inline">{props.location}</h4></span>
           <span className="inline right"><Rating rating={props.rating}/></span>

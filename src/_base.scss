@@ -324,6 +324,33 @@ a {
     }
   }
 
+  &.mix {
+    width: 6rem;
+    height: 1.5rem;
+
+    .button-front {
+      border: solid 1px black;
+    }
+
+    .button-back {
+      background-color: white;
+      border: solid 1px black;
+      top: -4px;
+      left: -4px;
+
+      p {
+        color: black;
+        @include transform(translateY(-40%));
+      }
+    }
+
+    &:hover {
+      .button-front {
+        transform: translate(-4px, -4px);
+      }
+    }
+  }
+
   &:hover {
     cursor: pointer;
 
@@ -336,16 +363,18 @@ a {
 .article-card {
   text-align: center;
   background-color: white;
-  //border: solid 2px $border;
+  -webkit-box-shadow: 0px 3px 12px 0px rgba(183, 180, 180, 0.5);
+  -moz-box-shadow: 0px 3px 12px 0px rgba(183, 180, 180, 0.5);
+  box-shadow: 0px 3px 12px 0px rgba(183, 180, 180, 0.5);
   margin-bottom: 10px;
   max-height: 600px;
   text-overflow: ellipsis;
   @include transition(all 0.2s ease-in-out);
 
   &:hover {
-    .article-overlay {
-      opacity: 1;
-    }
+    // .article-overlay {
+    //   opacity: 1;
+    // }
   }
 
   > div {
@@ -394,7 +423,7 @@ a {
     font-family: $font-secondary;
     text-align: center;
     line-height: 140%;
-    padding: 0 15px;
+    padding: 0 15px 50px 15px;
     font-size: 12px;
     margin-top: 10px;
     max-height: 150px;
@@ -419,6 +448,11 @@ a {
         color: black !important;
       }
     }
+  }
+
+  .button {
+    margin-left: 50%;
+    @include transform(translate(-50%, -25px));
   }
 
   .img {
@@ -478,6 +512,7 @@ a {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 1rem;
+  padding: 0 5rem;
 }
 
 .article {
